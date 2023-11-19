@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Santa</title>
+    <style>
+        body {
+            background-color: red; /* Red background */
+            font-family: 'Segoe Script', cursive; /* Replace with an appropriate festive font or use a web font link */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #fff; /* White text color */
+        }
+
+        #new-year-greeting {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        #login-container {
+            background-color: #ffffff; /* White container background */
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #santa-image {
+            width: 250px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50; /* Green submit button */
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="new-year-greeting">
+        Happy New Year!
+    </div>
+    <div id="login-container">
+        <img src="static/santa_claus.png" alt="Santa Claus" id="santa-image">
+        <form action="/login" method="post">
+            <div class="inputs">
+                <input type="text" name="username" id="username" class="username" placeholder="Username" required>
+                <input type="password" name="password" id="password" class="password" placeholder="Password" required>
+            </div>
+            <div class="buttons">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
