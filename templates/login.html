@@ -72,8 +72,11 @@
     <div id="new-year-greeting">
         Happy New Year!
     </div>
-    <div id="login-container">
+    <div id="login-container">  
         <img src="static/santa_claus.png" alt="Santa Claus" id="santa-image">
+        {% if error %}
+        <p style="color: red;">{{ error }}</p>
+        {% endif %}      
         <form action="/login" method="post">
             <div class="inputs">
                 <input type="text" name="username" id="username" class="username" placeholder="Username" required>

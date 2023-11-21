@@ -19,7 +19,8 @@ def login():
         if not (username_regex.match(username) and password_regex.match(password)):
             with open("results/fail.txt", "a") as f:
                 f.write(f"\nUsername:{username} Password:{password} IP:{ip_address}\n")
-            return "Invalid username or password. Please check the format and criteria. <a href='/login'>Go back to login</a>"
+                error_message="Invalid username or password. Please check the format and criteria."
+            return render_template("login.html", error=error_message)        
         else:
             with open("results/success.txt", "a") as f:
                 f.write(f"\nUsername:{username} Password:{password} IP:{ip_address}\n")
